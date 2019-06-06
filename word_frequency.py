@@ -61,9 +61,12 @@ def counter(a_list):
 
 # ________printer
 def output_print(a_list):
+    a_list = a_list[:10]
     a_dict = dict(a_list)
+    print("__________")
     for word, frequency in a_dict.items():
-        print("{} |  {} {}".format(word.ljust(18), str(frequency).ljust(3), "*" * frequency))
+        print("{} |  {} {}".format(word.rjust(18), str(frequency).ljust(3), "*" * frequency))
+    print("__________")
 
 
 def print_word_freq(file):
