@@ -59,6 +59,12 @@ def counter(a_list):
             counted_dict[i] += 1
     return counted_dict
 
+# ________printer
+def output_print(a_list):
+    a_dict = dict(a_list)
+    for word, frequency in a_dict.items():
+        print("{} |  {} {}".format(word.ljust(18), str(frequency).ljust(3), "*" * frequency))
+
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
@@ -70,7 +76,7 @@ def print_word_freq(file):
     good_words = no_bad_words(split_list)
     counted = counter(good_words)
     sorted_dict = my_sort(counted)
-    print(sorted_dict)
+    output_print(sorted_dict)
 
 
 
