@@ -30,7 +30,7 @@ def clean_text(text):
 # -------------- sorts a 2 dimensional array by the second item
 
 def my_sort(word_freq_dict):
-    sorted_dict = sorted(word_freq_dict.items(), key=lambda x: x[1], reverse=True)
+    sorted_dict = sorted(word_freq_dict.items(), key=lambda x: (-x[1], x[0]), reverse=False)
     return sorted_dict
 
 
